@@ -3,6 +3,8 @@ package com.example.challenge.bisection;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.function.DoubleUnaryOperator;
+
+import com.example.challenge.exceptions.BisectionInvalidArguments;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -25,5 +27,28 @@ class BisectionMethodTests {
                 .doubleValue())
             .isEqualTo(1.521d);
     }
+
+
+    @Test
+    @DisplayName("Should throw illegal argument exception due to a and b being the same")
+    void findRoot_invalidArgumentGreaterThanArg_shouldThrowError() {
+        Assertions.assertThatExceptionOfType(BisectionInvalidArguments.class)
+                .isThrownBy(() -> {
+                    var root = BisectionMethod.findRoot(f, 2, 2, tolerance, maxIterations);
+                }).withMessage("Illegal parameters a must be smaller than b");
+
+
+    }
+    @Test
+    @DisplayName("Ensure Nan never return with max decimal numbers ")
+    void findRoot_invalidArgument_shouldThrowError() {
+        var root = BisectionMethod.findRoot(f, -99999999, 999999999, tolerance, maxIterations);
+        Assertions.assertThat(Double.isNaN(root)).isEqualTo(false);
+
+
+    }
+
+
+
 
 }
