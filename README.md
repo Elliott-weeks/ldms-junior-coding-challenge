@@ -6,10 +6,15 @@ To find the docs - when the following cmd is run:
 `./mvnw test`
 the code will produce documentation for each API at the following location:
 `target/docs`
+  
 
 
 
-# Technical Challenge
+
+
+
+
+# Technical Challenge Specification 
 
 ```
 TIMEBOX: 3-4 hours
