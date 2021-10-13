@@ -15,7 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest(BisectionMethodController.class)
 @DisplayName("Unit :: Controller :: Bisection Method Controller")
-@AutoConfigureRestDocs(outputDir = "target/snippets")
+@AutoConfigureRestDocs(outputDir = "target/docs")
 public class BisectionMethodControllerTest {
 
     @Autowired
