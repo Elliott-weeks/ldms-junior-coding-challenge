@@ -1,3 +1,14 @@
+# Elliott Weeks Coding Challenge submission
+## Run instructions
+
+Run instructions are identical to ones provided in the getting started section. 
+To find the docs - when the following cmd is run:
+`./mvnw test`
+the code will produce documentation for each API at the following location:
+`target/docs`
+
+
+
 # Technical Challenge
 
 ```
