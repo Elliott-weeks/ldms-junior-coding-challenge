@@ -27,7 +27,7 @@ public class BisectionMethodControllerTest {
         mockMvc.perform(MockMvcRequestBuilders
                 .get("/BisectionMethodService?a=1&b=2")
                 .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk()).andExpect(jsonPath("$.root", is(1.5213804244995117))).andDo(document("BisectionMethodSuccess")); // why does this auto round to 1DP
+                .andExpect(status().isOk()).andExpect(jsonPath("$.root", is(1.5213804244995117))).andDo(document("BisectionMethodSuccess")); 
 
 
     }
